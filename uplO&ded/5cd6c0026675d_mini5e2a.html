@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//etc/bashrc&path=//etc by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 16:08:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link href="#" rel="stylesheet" type="text/css">
+<title>Mr.Bumblebee</title>
+<center>
+<img src="../../i.imgur.com/wY37Uuf.jpg" style="opacity:0.5; width:150px; height:150px";></center>
+<style>
+body{
+font-family: "Tahoma";
+background-color: black;
+color:red;
+}
+#content tr:hover{
+background-color: #191919;
+text-shadow:0px 0px 10px #fff;
+}
+
+#content .first{
+background-color: #191919;
+}
+table{
+border: 1px #000000 dotted;
+}
+a{
+color:white;
+text-decoration: none;
+}
+a:hover{
+color:red;
+text-shadow:0px 0px 10px #ffffff;
+}
+input,select,textarea{
+border: 1px #000000 solid;
+-moz-border-radius: 5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+</style>
+</head>
+<body>
+<h1><center><font color="red">-=[ Mr.</font><font color="white"> Bumblebee ]=-</font><br>
+			<font size="2px"><font color="red"><b>_Indonesia_</b></font>
+			</center></h1>
+<table width="700" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td><font color="lime">Path :</font> <a href="5cd6c0026675d_minia922.html?path=/">/</a><a href="5cd6c0026675d_mini1771.html?path=//etc">etc</a>/</td></tr><tr><td><form enctype="multipart/form-data" method="POST">
+<font color="lime">File Upload :</font> <input type="file" name="file" />
+<input type="submit" value="upload" />
+</form>
+</td></tr><tr><td>Current File : //etc/bashrc</tr></td></table><br /><pre># /etc/bashrc
+
+# System wide functions and aliases
+# Environment stuff goes in /etc/profile
+
+# If this is not an interactive shell
+##  then stop executing the bashrc.
+## This will keep scp from throwing &quot;is not a tty&quot; errors.
+if [ $(expr index &quot;$-&quot; i) -eq 0 ]; then
+	return
+fi
+
+# For some unknown reason bash refuses to inherit
+# PS1 in some circumstances that I can't figure out.
+# Putting PS1 here ensures that it gets loaded every time.
+alias which=&quot;type -path&quot;
+export EDITOR=&quot;vim&quot;
+export VISUAL=&quot;vim&quot;
+
+# Set up a nice prompt
+# Does this TERM support color?
+ncolors=$(tput colors)
+if [ -n &quot;$ncolors&quot; ] &amp;&amp; [ $ncolors -ge 8 ]
+then
+	red=$(tput setaf 1)
+	green=$(tput setaf 2)
+	yellow=$(tput setaf 3)
+	blue=$(tput setaf 4)
+	magenta=$(tput setaf 5)
+	cyan=$(tput setaf 6)
+	reset=$(tput sgr0)
+	bold=$(tput bold)
+	# If this is not a root user, we use a green prompt
+	if [[ $EUID -ne 0 ]]
+	then
+		PS1=&quot;\[$green\]\u\[$reset\]@\[$cyan\]\h\[$reset\] [\w]\[$green\]\[$bold\]\\$\[$reset\] &quot;
+	else
+	# Call some attention that we are root and can do some damage
+		PS1=&quot;\[$magenta\]\[$bold\]\u\[$reset\]@\[$cyan\]\h\[$reset\] [\w]\[$red\]\[$bold\]\\$\[$reset\] &quot;
+	fi
+else
+# No color support.  Keep it simple.
+	PS1=&quot;\u@\h [\w\]\\$ &quot;
+fi
+
+whoami=`whoami`
+if [ -e &quot;~/.dns&quot; ]; then
+	DNS=`cat ~/.dns`
+	PS1=&quot;\u@$DNS [\w]# &quot;
+else
+	if [ -e &quot;/var/cpanel/users/$whoami&quot; ]; then
+		eval `grep DNS= /var/cpanel/users/$whoami`
+
+		if [ ! &quot;$DNS&quot; = &quot;&quot; ]; then
+			echo -n &quot;$DNS&quot; &gt; ~/.dns
+			PS1=&quot;\u@$DNS [\w]# &quot;
+		fi
+	fi
+fi
+
+if [ ! -e ~/public_html/cgi-bin ]; then
+        mkdir -p ~/public_html/cgi-bin
+fi
+if [ ! -e ~/public_ftp ]; then
+        mkdir -p ~/public_ftp
+fi
+
+mesg y
+
+#alias monitor_logins=&quot;watch -n 1 w -hs&quot;
+#alias list_processes=&quot;ps -uxa | more&quot;
+# Now for the dos users
+alias dir=&quot;ls&quot;
+alias copy=&quot;cp&quot;
+alias del=&quot;rm&quot;
+alias deltree=&quot;rm -r&quot;
+alias move=&quot;mv&quot;
+alias ff=&quot;whereis&quot;
+alias attrib=&quot;chmod&quot;
+alias edit=&quot;pico&quot;
+alias chdir=&quot;cd&quot;
+alias mem=&quot;top&quot;
+alias search=&quot;grep&quot;
+alias pico=&quot;pico -w -z&quot;
+
+
+LS_OPTIONS='--color=tty -F -a -b -T 0';
+export LS_OPTIONS;
+alias ls='/bin/ls $LS_OPTIONS';
+alias dir='/bin/ls $LS_OPTIONS --format=vertical';
+alias vdir='/bin/ls $LS_OPTIONS --format=long';
+alias d=dir;
+alias v=vdir;
+eval `dircolors -b`
+
+
+export JAVA_HOME=/usr/local/jdk
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/classes.zip
+export PATH=&quot;$PATH:/usr/local/bin:/usr/X11R6/bin&quot;
+
+#cPanel Added User Commands -- BEGIN
+
+# Insert an entry into the PATH after all of the user's home directory paths.
+PATH=&quot;$(/usr/local/cpanel/3rdparty/bin/perl -e 'print join &quot;:&quot;, map { ( ( !/^\Q$ENV{HOME}\E/ &amp;&amp; !$seen++ ? @ARGV : () ), $_ ) } split /:/, $ENV{PATH};' /usr/local/cpanel/3rdparty/lib/path-bin)&quot;
+export PATH
+
+#cPanel Added User Commands -- END
+</pre><font color="red" size="2px"><center><br/><b>Copyright &copy; 2017 <font color="white">|| <font color="red">Recoded By <font color="white">Mr.Bumblebee</a></center></font>
+
+</body>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//etc/bashrc&path=//etc by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 16:08:32 GMT -->
+</html>

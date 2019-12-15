@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html >
+<!--  Website template by freewebsitetemplates.com  -->
+<html>
+
+
+<!-- Mirrored from genialhcpl.com/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:44:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Genial Health Care Pvt Ltd</title>
+	<meta  charset=iso-8859-1" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--[if IE 6]>
+		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 7]>
+        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
+	<![endif]-->
+	
+<script language=JavaScript>
+function validateLogin()
+{
+  	if (document.frm.username.value == "")
+  	{
+    	alert("Please enter a value for the \"Username\" field.");
+    	document.frm.username.focus();
+    	return (false);
+  	}
+ 	if (document.frm.password.value == "")
+  	{
+    	alert("Please enter a value for the \"Password\" field.");
+    	document.frm.password.focus();
+    	return (false);
+  	}
+	if (document.frm.branch_name.value == "")
+  	{
+    	alert("Please enter a value for the \"Branch Name\" field.");
+    	document.frm.branch_name.focus();
+    	return (false);
+  	}
+  	return (true);
+}
+//-->
+</script>
+
+
+</head>
+
+<body>
+
+	  
+			<div id="header">
+	           		<a href="index-2.html" id="logo"><img src="images/logo.gif" width="310" height="114" alt="" title=""></a>
+					<ul class="navigation">
+						<li class="active"><a href="index-2.html">Home</a></li>
+						<li><a href="about-us.html">Welcome Note</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="contact-us.html">Contact us</a></li>
+					</ul>
+			</div>
+			
+			<div id="body">
+			
+			       <div id="content">
+				   
+				        <div class="content">
+							<div class="about" style="min-height:500px">
+							     <h2>LOGIN</h2>
+                                 
+							<p>	 
+							<table align="center" width="100%" border="1" cellpadding="3"  cellspacing="0">	 
+								 <form name="frm" method="post" action="#" onSubmit="return validateLogin();">
+																<tr>
+								  <td align="right"><b>Username</b></td>
+								  <td width="50%"><input type="text" size="18" name="username"></td>
+								</tr>
+								<tr>
+								  <td align="right"><b>Password</b></td>
+									<td><input type="password" size="18" name="password"></td>
+								</tr>
+								<tr>
+								  <td align="right"><b>Branch</b></td>
+								  <td>
+								  	<select name="branch_name" style="width:145px" class="chkbox">
+											<option value=""> - select - </option>
+																							<option value="3" >AGARTALA</option>
+																							<option value="1" >GUWAHATI</option>
+																							<option value="2" >KOLKATA</option>
+																					</select>
+								  </td>
+								</tr>
+								<tr>
+								  <td colspan="2" align="center">
+								  <input type="submit" name="submit" value="Submit">
+								  </td>
+								</tr>
+							  </form>
+							</table>
+									
+								</p>	
+							
+														
+									</div>
+								</div>
+						
+					    
+				   
+				   
+				  
+			
+			</div>
+			
+			<div id="footer">
+			        <div id="footnote">
+						<div class="section">
+						   &copy; 2013 <a href="index-2.html">Genial Health Care Pvt Ltd</a>. All Rights Reserved.
+						</div>
+					</div>
+			</div>
+			
+	
+</body>
+
+<!-- Mirrored from genialhcpl.com/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 15:44:57 GMT -->
+</html>

